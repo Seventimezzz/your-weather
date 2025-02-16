@@ -1,0 +1,51 @@
+.card {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+
+
+    .locationBox {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: .6rem;
+        background: var(--primary-100);
+        padding: 1.5rem;
+        border-radius: 1.2rem;
+
+        .img {
+          margin: 0 auto;
+          border-radius: 1rem;
+        }
+
+        .location {
+            font-size: var(--font-m);
+
+            span {
+                font-size: var(--font-l);
+            }
+        }
+    }
+
+    .infoBox {
+        border-radius: 1rem;
+        padding: 1.5rem;
+        width: 100%;
+        background: var(--primary-100);
+
+        column-width: 48%;
+        column-count: 2;
+        column-gap: 4%;
+
+        .info {
+            font-size: var(--font-s);
+
+            span {
+                font-size: var(--font-m);
+            }
+        }
+    }
+
+}

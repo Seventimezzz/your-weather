@@ -1,0 +1,30 @@
+.list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100rem;
+
+    .searchBox {
+        display: flex;
+        width: 100%;
+        gap: 1rem;
+        padding: 1.2rem;
+        border-radius: 1rem;
+
+        .searchString{
+            background: var(--background);
+            border-radius: .4rem;
+        }
+    }
+
+    .resultContainer {
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--primary-100);
+        padding: 1.2rem;
+        border-radius: 1rem;
+        padding: 3rem;
+    }
+}
