@@ -5,23 +5,23 @@ import { BuildOptions } from "./types/config";
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
     const cssLoader = {
-      test: /\.s[ac]ss$/i,
+        test: /\.s[ac]ss$/i,
         use: [
-          options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-          {
-              loader: 'css-loader',
-              options: {
-                  modules: {
-                      auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-                      localIdentName: options.isDev
-                          ? '[path][name]__[local]--[hash:base64:5]'
-                          : '[hash:base64:8]',
-                      namedExport: false,
-                  },
-              },  
-          },
-          'sass-loader',
-      ],
+            options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+            {
+                loader: 'css-loader',
+                options: {
+                    modules: {
+                        auto: (resPath: string) => Boolean(resPath.includes('.module.')),
+                        localIdentName: options.isDev
+                            ? '[path][name]__[local]--[hash:base64:5]'
+                            : '[hash:base64:8]',
+                        namedExport: false,
+                    },
+                },  
+            },
+            'sass-loader',
+        ],
     }
 
     const assetsLoader = {
@@ -38,11 +38,11 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         test: /\.(js|jsx|tsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            cacheDirectory: true,
-            presets: ["@babel/preset-env"]
-          },
+            loader: 'babel-loader',
+            options: {
+                cacheDirectory: true,
+                presets: ["@babel/preset-env"]
+            },
         },
     }
 

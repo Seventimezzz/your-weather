@@ -1,0 +1,32 @@
+:root {
+  --font-s: 1.6rem;
+  --font-m: 1.8rem;
+  --font-l: 2rem;
+
+  --text: #fff;
+  --background: #f6f4f4;
+  --primary-100: #2d2c2c;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  font: inherit;
+}
+
+body {
+  font: var(--font-m);
+  color: var(--text);
+}
+
+
+  

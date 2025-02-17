@@ -1,10 +1,11 @@
-import { Button } from "../shared"
+import { MainPage } from "pages/index"
+import { StoreProvider } from "./providers"
 
 export const App = () => {
 
     return (
-        <div>
-            <Button/>
-        </div>
+        <StoreProvider>
+            <MainPage/>
+        </StoreProvider>
     )
 }
