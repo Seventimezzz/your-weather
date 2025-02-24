@@ -1,0 +1,13 @@
+.searchBox {
+    display: flex;
+    gap: 1rem;
+    padding: .8rem;
+    border-radius: 1rem;
+
+    .searchString{
+        background: var(--background);
+        border-radius: .4rem;
+    }
+
+
+}

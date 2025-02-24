@@ -1,0 +1,22 @@
+
+.dayRow {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.hourlyRow {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 18px;
+
+  .img {
+    border-radius:.5rem;
+  }
+
+  .temperature {
+    font-weight: 500;
+  }
+
+}

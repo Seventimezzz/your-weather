@@ -2,10 +2,11 @@
   --font-s: 1.6rem;
   --font-m: 1.8rem;
   --font-l: 2rem;
-
-  --text: #fff;
-  --background: #f6f4f4;
-  --primary-100: #2d2c2c;
+  
+  --active: #1976d2;
+  --white: #fff;
+  --text: #222426;
+  --background: #eceef2;
 }
 
 * {
@@ -26,6 +27,11 @@ select {
 body {
   font: var(--font-m);
   color: var(--text);
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 

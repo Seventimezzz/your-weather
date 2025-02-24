@@ -1,5 +1,5 @@
 
-import { WeatherSuccessResponse } from "features/api/types";
+import { TCurrentWeatherSuccessResponse } from "features/index";
 import { TListItem } from "./types";
 
 export class StoreResults {
@@ -7,7 +7,7 @@ export class StoreResults {
     private locationList: TListItem[];
     private infoList: TListItem[];
 
-    constructor(data: WeatherSuccessResponse) {
+    constructor(data: TCurrentWeatherSuccessResponse) {
         this.locationList = [
             {
                 name: 'Страна',

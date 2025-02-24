@@ -1,5 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { WeatherResponse } from './types';
+import { TWeatherCurrentResponse, TWeatherHistoricalResponse } from './types';
+import { TGetOneDayHistoricalWeatherArg } from './types/historicalWeather';
+
 
 export const apiSlice = createApi({
     reducerPath: 'weatherApi',
@@ -7,10 +9,13 @@ export const apiSlice = createApi({
         baseUrl: process.env.BASE_URL
     }),
     endpoints: (builder) => ({
-        getCurrentWeather: builder.query<WeatherResponse, string>({
-            query: (city) => `current?access_key=${process.env.API_KEY}&query=${city}`,
+        getCurrentWeather: builder.query<TWeatherCurrentResponse, string>({
+            query: (position) => `current?access_key=${process.env.API_KEY}&query=${position}`,
+        }),
+        getOneDayHistoricalWeather: builder.query<TWeatherHistoricalResponse, TGetOneDayHistoricalWeatherArg>({
+            query: ({position, date, isHourly}) => `historical?access_key=${process.env.API_KEY}&query=${position}&historical_date=${date}&hourly=${isHourly}`,
         }),
     }),
 });
 
-export const { useGetCurrentWeatherQuery } = apiSlice
+export const { useLazyGetOneDayHistoricalWeatherQuery , useLazyGetCurrentWeatherQuery } = apiSlice

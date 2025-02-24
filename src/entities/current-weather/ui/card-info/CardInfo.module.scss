@@ -1,0 +1,49 @@
+.currentWeather{
+  background-image: url('../../../../shared/assets/img/bg.jpeg');
+  background-size: cover;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: var(--white);
+
+  .location {
+      font-size: 18px;
+      font-weight: 500;
+  }
+
+  .temperature {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      .currentTemperature {
+          font-size: 48px;
+      }
+
+      .weatherImg{
+          border-radius: 1rem
+      }
+
+      .temperatureInfo{
+          font-size: 18px;
+      }
+  }
+
+  .info {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+      font-size: 18px;
+      font-weight: 500;
+
+      .flex {
+          display: flex;
+          align-items: center;
+          gap: .2rem;
+  
+          .icon {
+              height: 2rem;
+          }
+      }
+  }
+}
