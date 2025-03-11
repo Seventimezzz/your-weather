@@ -1,5 +1,5 @@
 import { useAppSelector, RootState } from 'app/index';
-import { useLazyGetCurrentWeatherQuery  } from "features/index";
+import { useGetCurrentWeatherQuery  } from "features/index";
 import { StatusRequest } from 'widgets/index';
 import { CurrentWeather } from 'entities/current-weather';
 import { Page } from '../AbstractPage'
@@ -9,23 +9,8 @@ export const MainPage = () => {
     
     const position = useAppSelector((state: RootState) => state.location.position);
 
-    const [trigger, status] = useLazyGetCurrentWeatherQuery();
-
-    const {
-        isSuccess,
-        isLoading,
-        isError,
-        data
-    } = status
-
-    const handleFetchWeather = useCallback(() => {
-        trigger(position);
-    }, [position, trigger])
-
-    useEffect(() => {
-        if (position) handleFetchWeather()   
-    }, [handleFetchWeather, position])
-
+    const { data, isSuccess, isLoading, isError } = useGetCurrentWeatherQuery(position, { skip: !position});
+    
     return (
         <Page>
             <StatusRequest 

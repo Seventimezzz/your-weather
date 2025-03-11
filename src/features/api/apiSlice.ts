@@ -18,4 +18,4 @@ export const apiSlice = createApi({
     }),
 });
 
-export const { useLazyGetOneDayHistoricalWeatherQuery , useLazyGetCurrentWeatherQuery } = apiSlice
+export const { useGetCurrentWeatherQuery, useGetOneDayHistoricalWeatherQuery } = apiSlice
