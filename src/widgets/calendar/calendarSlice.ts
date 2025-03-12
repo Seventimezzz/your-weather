@@ -1,5 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSelector, createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import { RootState } from 'app/providers'
 import dayjs from 'dayjs'
 import { getDateToString } from 'shared/utils'
 
@@ -20,6 +21,11 @@ export const calendarSlice = createSlice({
         },
     },
 })
+
+export const getDate = createSelector(
+    (state: RootState) => state.calendar,
+    (calendar: CalendarState) => calendar.date
+)
 
 export const { setDate } = calendarSlice.actions
 

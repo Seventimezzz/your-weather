@@ -1,5 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSelector, createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+import { RootState } from 'app/providers'
 
 export interface CurrentPositionState {
     position: string
@@ -19,6 +20,10 @@ export const currentPositionSlice = createSlice({
     },
 })
 
+export const getPosition = createSelector(
+    (state: RootState) => state.location,
+    (location: CurrentPositionState) => location.position
+)
 export const { setPosition } = currentPositionSlice.actions
 
 export default currentPositionSlice.reducer

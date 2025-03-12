@@ -1,7 +1,7 @@
 import { DatePicker, LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { setDate } from '../calendarSlice'
-import { RootState, useAppDispatch, useAppSelector } from 'app/providers'
+import { RootState, useAppDispatch } from 'app/providers'
 import { getDateToString } from 'shared/utils'
 import dayjs from 'dayjs'
 
