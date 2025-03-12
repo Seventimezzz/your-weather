@@ -4,7 +4,7 @@ import { useAppDispatch } from "app/providers"
 import { getLocation } from "./getCurrentPosition"
 import { setPosition } from "./currentPositionSlice"
 
-export const useGetCurrentPositionUI = () => {
+export const useGetCurrentPosition = () => {
     const dispatch = useAppDispatch()
 
     const setCurrentPosition = useCallback(async(position: GeolocationPosition) => {
