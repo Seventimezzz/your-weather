@@ -12,7 +12,7 @@ export const Header = () => {
         },
         {
             to: ROUTER_PATHS.HISTORY,
-            text: 'weather for the day'
+            text: 'weather for the past day'
         }
     ]
 
